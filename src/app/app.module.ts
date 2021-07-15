@@ -8,6 +8,7 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { HomeComponent } from './home/home.component';
 import { ChefComponent } from './chef/chef.component';
 import { ReviewComponent } from './review/review.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReviewComponent } from './review/review.component';
     ReservationComponent,
     HomeComponent,
     ChefComponent,
-    ReviewComponent
+    ReviewComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
