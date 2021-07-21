@@ -5,75 +5,95 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
-<div class="container py-5">
-    <div class="row">
-        <div class="col-lg-10 mx-auto col-12 text-center mb-3">
-            <h1 class="mt-0 text-primary">Notre Menu</h1>
-            <p class="lead">Commencez par une sélection de notre menu de boissons primé ou choisissez un vin dans notre
-                vaste carte des vins. Notre carte des vins comprend plus de 100 millésimes différents et a reçu le prix
-                d'excellence de la chambre de commerce.</p>
-        </div>
-        <div class="col-12 mt-4">
-            <h3 class="text-center">Cocktails</h3>
-            <hr class="accent my-5">
-        </div>
-        <div class="card-columns" *ngIf='menucocktails.length'>
-            <div class="card card-body" *ngFor="let menucocktail of menucocktails">
-                <img class="float-left" [src]='menucocktail.imageUrl' [style.width.px]='imageWidth'
-                    [style.margin.px]='imageMargin' [style.height.px]='imageHeight'>
-                <span class="float-right font-weight-bold">{{menucocktail.prix |
-                    currency:'EUR':'symbol':'1.2-2'}}</span>
-                <h6 class="text-truncate">{{menucocktail.menuname}}</h6>
-                <p class="small">{{menucocktail.description}}</p>
+<div  style="background-color: beige; margin-bottom: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto col-12 text-center mb-3">
+                <h1 class="mt-0">Notre Menu</h1>
+                <p class="lead">Commencez par une sélection de notre menu de boissons primé ou choisissez un vin dans
+                    notre
+                    vaste carte des vins. Notre carte des vins comprend plus de 100 millésimes différents et a reçu le
+                    prix
+                    d'excellence de la chambre de commerce.</p>
             </div>
-        </div>
-        <div class="col-12 mt-4">
-            <h3 class="text-center">Entrées</h3>
-            <hr class="accent my-5">
-        </div>
-        <div class="card-columns" *ngIf='menuentrees.length'>
-            <div class="card card-body" *ngFor="let menuentree of menuentrees">
-                <img class="float-left" [src]='menuentree.imageUrl' [style.width.px]='imageWidth'
-                    [style.margin.px]='imageMargin' [style.height.px]='imageHeight'>
+            <div class="bg-image just">
+                <div class="col-12 mt-4">
+                    <h3 class="text-center">Cocktails</h3>
+                    <hr class="accent my-5">
+                </div>
+                <div class="card-columns" *ngIf='menucocktails.length'>
+                    <div class="card card-body" *ngFor="let menucocktail of menucocktails">
+                        <img class="float-left" [src]='menucocktail.imageUrl' [style.width.px]='imageWidth'
+                            [style.margin.px]='imageMargin' [style.height.px]='imageHeight'>
+                        <span class="float-right font-weight-bold">{{menucocktail.prix |
+                            currency:'EUR':'symbol':'1.2-2'}}</span>
+                        <h6 class="text-truncate">{{menucocktail.menuname}}</h6>
+                        <p class="small">{{menucocktail.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-image just">
+                <div class="col-12 mt-4">
+                    <h3 class="text-center">Entrées</h3>
+                    <hr class="accent my-5">
+                </div>
+                <div class="card-columns" *ngIf='menuentrees.length'>
+                    <div class="card card-body" *ngFor="let menuentree of menuentrees">
+                        <img class="float-left" [src]='menuentree.imageUrl' [style.width.px]='imageWidth'
+                            [style.margin.px]='imageMargin' [style.height.px]='imageHeight'>
 
-                <span class="float-right font-weight-bold">{{menuentree.prix | currency:'EUR':'symbol':'1.2-2'}}</span>
-                <h6 class="text-truncate">{{menuentree.menuname}}</h6>
-                <p class="small">{{menuentree.description}}</p>
-                <div class="font-weight-bold small " *ngIf='menuentree.menuname === "Fried Shrimp"'>Classic Sweet BBQ
+                        <span class="float-right font-weight-bold">{{menuentree.prix |
+                            currency:'EUR':'symbol':'1.2-2'}}</span>
+                        <h6 class="text-truncate">{{menuentree.menuname}}</h6>
+                        <p class="small">{{menuentree.description}}</p>
+                        <div class="font-weight-bold small " *ngIf='menuentree.menuname === "Fried Shrimp"'>Classic
+                            Sweet
+                            BBQ
+                        </div>
+                        <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Wings"'>Hot Buffalo Sauce
+                        </div>
+                        <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Wings"'>Sriracha Honey Fish
+                            Sauce
+                        </div>
+                        <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Wings"'>Scorching Hot
+                            Habanero
+                        </div>
+                        <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Quesadilla"'>Ajouter Chili:
+                            $2
+                        </div>
+                        <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Quesadilla"'>Ajouter du porc
+                            effiloché au barbecue: $2</div>
+                    </div>
                 </div>
-                <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Wings"'>Hot Buffalo Sauce</div>
-                <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Wings"'>Sriracha Honey Fish Sauce
+            </div>
+            <div class="bg-image just">
+                <div class="col-12 mt-4">
+                    <h3 class="text-center">Plats principaux</h3>
+                    <hr class="accent my-5">
                 </div>
-                <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Wings"'>Scorching Hot Habanero</div>
-                <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Quesadilla"'>Ajouter Chili: $2</div>
-                <div class="font-weight-bold small" *ngIf='menuentree.menuname === "Quesadilla"'>Ajouter du porc
-                    effiloché au barbecue: $2</div>
+                <div class="card-columns " *ngIf='menuplats.length'>
+                    <div class="card card-body" *ngFor="let menuplat of menuplats">
+                        <img class="float-left" [src]='menuplat.imageUrl' [style.width.px]='imageWidth'
+                            [style.margin.px]='imageMargin' [style.height.px]='imageHeight'>
+                        <span class="float-right font-weight-bold">{{menuplat.prix |
+                            currency:'EUR':'symbol':'1.2-2'}}</span>
+                        <h6 class="text-underline">{{menuplat.menuname}}</h6>
+                        <p class="small">{{menuplat.description}}</p>
+                    </div>
+                </div>
+                <div class="col-12 mt-4">
+                    <hr class="accent my-5">
+                </div>
             </div>
-        </div>
-        <div class="col-12 mt-4">
-            <h3 class="text-center">Plats principaux</h3>
-            <hr class="accent my-5">
-        </div>
-        <div class="card-columns" *ngIf='menuplats.length'>
-            <div class="card card-body" *ngFor="let menuplat of menuplats">
-                <img class="float-left" [src]='menuplat.imageUrl' [style.width.px]='imageWidth'
-                    [style.margin.px]='imageMargin' [style.height.px]='imageHeight'>
-                <span class="float-right font-weight-bold">{{menuplat.prix | currency:'EUR':'symbol':'1.2-2'}}</span>
-                <h6 class="text-underline">{{menuplat.menuname}}</h6>
-                <p class="small">{{menuplat.description}}</p>
-            </div>
-        </div>
-        <div class="col-12 mt-4">
-            <hr class="accent my-5">
-        </div>
-        <div class="col-6 mx-auto">
-            <div class="card card-body text-center">
-                <h5 class="text-uppercase">Mardi seulement!</h5>
-                <h6>Albondigas Soup</h6>
-                <p class="small"> Une tasse ou un bol fumant de soupe de légumes aux boulettes de viande mexicaine
-                    garnie de lanières de tortilla croustillantes et de fromage cheddar-Jack frais. Si vous aimez la
-                    cuisine mexicaine, essayez ceci!</p>
-                <span class="float-right font-weight-bold">$7</span>
+            <div class="col-6 mx-auto bg-image">
+                <div class=" text-center mt-4">
+                    <h5 class="text-uppercase">Mardi seulement!</h5>
+                    <h6 class="title-only">Albondigas Soup</h6>
+                    <p class="small" style="color: white;"> Une tasse ou un bol fumant de soupe de légumes aux boulettes de viande mexicaine
+                        garnie de lanières de tortilla croustillantes et de fromage cheddar-Jack frais. Si vous aimez la
+                        cuisine mexicaine, essayez ceci!</p>
+                    <span class="float-right font-weight-bold">$7</span>
+                </div>
             </div>
         </div>
     </div>

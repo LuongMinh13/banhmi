@@ -14,3 +14,25 @@
     min-height: 200px;
     max-width: 100%;
 }
+section{
+    background-image: url('../../assets/image/pngtree-crayfish-food-food-condiment-black-horizontal-banner-goodsseasoningblackhorizontal-bannerdelicious-image_50376.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@font-face {
+    font-family: 'hoodson_script_free_demoRg';
+    src: url('../../assets/font/hoodson/hoodson_free_font_-webfont.woff2') format('woff2'),
+         url('../../assets/font/hoodson/hoodson_free_font_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h2{
+    font-family: 'hoodson_script_free_demoRg';
+    font-size: 60px;
+    color:red;
+    -webkit-text-stroke: 1px white;
+}

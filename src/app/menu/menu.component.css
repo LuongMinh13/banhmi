@@ -1,3 +1,55 @@
 .card-columns {
     column-count: 2;
 }
+
+.bg-image{
+    background-image: url('../../assets/image/chalkboard-517818_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@font-face {
+    font-family: 'hoodson_script_free_demoRg';
+    src: url('../../assets/font/hoodson/hoodson_free_font_-webfont.woff2') format('woff2'),
+         url('../../assets/font/hoodson/hoodson_free_font_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1{
+   font-family: 'hoodson_script_free_demoRg';
+    font-size: 60px;
+    color:red;
+    -webkit-text-stroke: 0.5px white;
+}
+
+h3{
+    color: white;
+    font-family: 'hoodson_script_free_demoRg';
+    font-size: 40px;
+    -webkit-text-stroke: 0.5px silver;
+}
+
+h5{
+    color: white;
+    font-family: 'hoodson_script_free_demoRg';
+    font-size: 40px;
+    -webkit-text-stroke: 0.5px silver;
+}
+
+.title-only{
+    color: yellow;
+    font-family: 'hoodson_script_free_demoRg';
+    font-size: 25px;
+    -webkit-text-stroke: 0.5px silver;
+}
+
+.menu-pading{
+    padding-left: 20x !important;
+    padding-right: 10px;
+}
+
+.just{
+    height: 760px;
+}
